@@ -30,14 +30,3 @@ class JackAttack(object):
         print("He runs away.")
 
 
-
-
-
-
-def main():
-    jack = JackAttack()
-    jack.attack()
-
-
-if __name__ == "__main__":
-    main()
