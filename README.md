@@ -30,11 +30,14 @@ jack = JackAttack()
 jack.attack()
 ```
 
-
-
-
-
 <br> <br> <br>
 
 ## Notes on creating a Python library for PyPI
+This notes section will follow my learning of the process for creating a library and having it hosted on the Python Package Index platform as well as document the sources I have used to that end.
+<br><br>
+
+<br>
+
+#### Sources
 ---
+* The '[Publishing (Perfect) Python Packages on PyPi](https://www.youtube.com/watch?v=GIF3LaRqgXo)' video on YouTube
