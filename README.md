@@ -178,6 +178,29 @@ This repository has been released under the [MIT Liscense](https://choosealicens
 
 **Step 8:** Classifiers - the tags under which your package can be searched on PyPi
 
+Classifiers are the tags that can be used to search and/or find your package on the PyPi platform. A list of valid classifiers can be found at [pypi.org/classifiers](https://pypi.org/classifiers)
+
+You can add these classifiers to your `setup.py` file in this fashion:
+```python
+from setuptools import setup
+
+setup(
+        name='jackattack', # this is what you 'pip install'
+        version='0.0.1',
+        description='An attack class for Jack',
+        py_modules=["jackattack"], # this is what you will import
+        package_dir={'': 'src'},
+        classifiers=[ # tags used to search the library on PyPi
+            "Development Status :: 3 - Alpha",
+            "License :: OSI Approved :: MIT License",
+            "Natural Language :: English",
+            "Operating System :: OS Independent",
+            "Programming Language :: Python :: 3"
+        ],
+)
+```
+
+
 
 <br>
 
