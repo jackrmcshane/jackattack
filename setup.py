@@ -1,6 +1,10 @@
 
 from setuptools import setup
 
+with open("README.md", "r") as f:
+    long_description = f.read()
+
+
 setup(
         name='jackattack', # this is what you 'pip install'
         version='0.0.1',
@@ -14,4 +18,6 @@ setup(
             "Operating System :: OS Independent",
             "Programming Language :: Python :: 3"
         ],
+        long_description=long_description,
+        long_description_content_type="text/markdown",
 )
