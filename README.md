@@ -69,7 +69,7 @@ setup.py
 **Step 3:** A rudimentary setup.py file will look like this. (**Note:** if you have pip installed, you already have setuptools as they ship together.)
 
 ```python
-from setup tools import setup
+from setuptools import setup
 
 setup(
     name='codebase', """ This is what you 'pip install' """
@@ -82,7 +82,19 @@ setup(
 
 <br>
 
-**Step 4:** From here, we build the elementary package in our terminal by running:
+**Step 4:** From here, we build the package in our terminal!
+
+First make sure you have the `wheel` package installed by running:
+
+```
+pip install wheel
+```
+or
+```
+pip3 install wheel
+```
+
+Now build the package:
 
 ```python
 python setup.py bdist_wheel
@@ -123,15 +135,15 @@ setup.py
 <br><br>
 Run `pip install -e .` from your working directory.
 <br><br>
-With a typical 'pip install <package_name>' call, the installed package is placed in your /site-packages/ folder amongst the rest of your installed python distribution.
+With a typical 'pip install <package_name>' call, the installed package is placed in your /site-packages/ folder amongst the rest of your installed python distribution. If we were to use something like that in this instance, we would end up with two versions of our code. The one that we are editing and the one that will be linked by our import statements. This will cause issues down the line.
 <br><br>
-If we were to use something like that in this instance, we would end up with two versions of our code. The one that we are editing and the one that will be linked by our import statements. This wil cause issues down the line.
-<br><br>
-*Solution:* Using the `-e .` flag.
+*Solution:* Using the `-e` flag. The command `pip install -e .` links the newly built python library in our current working directory to our python distribution such that only one copy of our library is referenced and any changes made are immediately available for testing.
+
+_**Note:** See the man-pages for pip-install for further documentation on the `-e` flag._
 
 
 <br>
 
 #### Sources
 ---
-* The '[Publishing (Perfect) Python Packages on PyPi](https://www.youtube.com/watch?v=GIF3LaRqgXo)' video on YouTube
+* The [Publishing (Perfect) Python Packages on PyPi](https://www.youtube.com/watch?v=GIF3LaRqgXo) video on YouTube
