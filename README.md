@@ -168,7 +168,7 @@ At this point, we could upload the code to PyPi.
 
 <br>
 
-_**Step 7:** Obtaining a liscense for your module_
+**Step 7:** Obtaining a liscense for your module
 
 Others cannot copy, modify, nor use your code library unless you have an appropriate liscense attached to it. A website that will help you determine the liscense that is best for your purposes and intentions is: [choosealicense.com](https://www.choosealicense.com)
 
