@@ -174,11 +174,16 @@ Others cannot copy, modify, nor use your code library unless you have an appropr
 
 This repository has been released under the [MIT Liscense](https://choosealicense.com/licenses/mit/).
 
+<br>
+
+**Step 8:** Classifiers - the tags under which your package can be searched on PyPi
 
 
 <br>
 
 #### Sources
 ---
-* The [Publishing (Perfect) Python Packages on PyPi](https://www.youtube.com/watch?v=GIF3LaRqgXo) video on YouTube
+* [Publishing (Perfect) Python Packages on PyPi](https://www.youtube.com/watch?v=GIF3LaRqgXo) - YouTube
+* [What Are Python Wheels and Why Should You Care?](https://realpython.com/python-wheels/)
 * [choosealicense.com](https://www.choosealicense.com)
+* [pypi.org/classifiers](https://pypi.org/classifiers)
