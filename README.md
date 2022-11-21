@@ -133,13 +133,47 @@ setup.py
 
 **Step 5:** Testing our initial package distribution by installing it locally.
 <br><br>
-Run `pip install -e .` from your working directory.
-<br><br>
 With a typical 'pip install <package_name>' call, the installed package is placed in your /site-packages/ folder amongst the rest of your installed python distribution. If we were to use something like that in this instance, we would end up with two versions of our code. The one that we are editing and the one that will be linked by our import statements. This will cause issues down the line.
 <br><br>
 *Solution:* Using the `-e` flag. The command `pip install -e .` links the newly built python library in our current working directory to our python distribution such that only one copy of our library is referenced and any changes made are immediately available for testing.
 
 _**Note:** See the man-pages for pip-install for further documentation on the `-e` flag._
+
+Run `pip install -e .` from your working directory.
+
+
+<br>
+
+**Step 6:** Testing
+
+You should now be able to import your newly created library into your code anywhere on your system. Let's test that out.
+
+In another directory, create a file named `main.py` that uses code from this repository:
+```python
+from jackattack import JackAttack
+
+jack = JackAttack()
+jack.attack()
+```
+
+After running `python main.py` in your terminal, you should get the following output:
+```
+Jack attacks you.
+Jack attacks you.
+Jack attacks you.
+You die.
+```
+
+At this point, we could upload the code to PyPi.
+
+<br>
+
+_**Step 7:** Obtaining a liscense for your module_
+
+Others cannot copy, modify, nor use your code library unless you have an appropriate liscense attached to it. A website that will help you determine the liscense that is best for your purposes and intentions is: [choosealicense.com](https://www.choosealicense.com)
+
+This repository has been released under the [MIT Liscense](https://choosealicense.com/licenses/mit/).
+
 
 
 <br>
@@ -147,3 +181,4 @@ _**Note:** See the man-pages for pip-install for further documentation on the `-
 #### Sources
 ---
 * The [Publishing (Perfect) Python Packages on PyPi](https://www.youtube.com/watch?v=GIF3LaRqgXo) video on YouTube
+* [choosealicense.com](https://www.choosealicense.com)
