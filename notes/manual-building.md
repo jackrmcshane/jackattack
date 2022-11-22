@@ -149,6 +149,19 @@ setup(
 ```
 
 
+**Step 9:** Using README.md as PyPi project description
+
+
+```python
+setup(
+        ...
+        long_description=long_description,
+        long_description_content_type="text/markdown",
+)
+```
+
+
+
 
 <br>
 
