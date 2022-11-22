@@ -210,7 +210,13 @@ pip install -e .[dev]
 
 _**Note:** These instructions can also be found in the README.md_
 
+<br>
 
+**Step 12:** Automated testing and GitHub Actions
+
+This section will be fleshed out at a later time as there is a lot of ground to be covered here.
+
+_**Note:** The primary source for the information that will be housed in this section can be found here: [Automated Testing in Python with pytest, tox, and GitHub Actions](https://www.youtube.com/watch?v=DhUpxWjOhME) - YouTube_
 
 
 <br>
@@ -221,3 +227,4 @@ _**Note:** These instructions can also be found in the README.md_
 * [What Are Python Wheels and Why Should You Care?](https://realpython.com/python-wheels/)
 * [choosealicense.com](https://www.choosealicense.com)
 * [pypi.org/classifiers](https://pypi.org/classifiers)
+* [Automated Testing in Python with pytest, tox, and GitHub Actions](https://www.youtube.com/watch?v=DhUpxWjOhME) - YouTube
