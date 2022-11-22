@@ -184,7 +184,32 @@ setup(
 
 The `install_requires` parameter in our `setup.py` file is a replacment for the often used `requirements.txt` file that is part of many projects.
 
-_**Note:** Re-run `pip install -e .`_
+_**Note:** Re-run `pip install -e .` This should now pull down the dependencies listed._
+
+<br>
+
+**Step 11:** Adding Development dependencies
+
+Development dependencies can be added in a similar way to the installment requirements above:
+```python
+setup(
+    ...
+    extras_require = {
+        "dev":[
+            "pytest>=3.7",
+        ],
+    },
+)
+```
+
+Installation of these dependencies (for the purposes of further testing and development of the project) can be done by inputing the following command at your terminal prompt:
+
+```bash
+pip install -e .[dev]
+```
+
+_**Note:** These instructions can also be found in the README.md_
+
 
 
 
