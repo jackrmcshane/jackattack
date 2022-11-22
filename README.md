@@ -43,3 +43,13 @@ You die.
 You scare Jack.
 He runs away.
 ```
+
+
+#### Developing jackattack
+---
+To install jackattack along with the tools you will need to develop and run tests, run the following in your virtual environment:
+
+```bash
+pip install -e .[dev]
+```
+
