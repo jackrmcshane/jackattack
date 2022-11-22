@@ -239,9 +239,43 @@ author = "Author Name",
 author_email = "your.email@address.com",
 ```
 
+Run `python setup.py sdist` once again. This time you should see no errors.
 
+Assuming no errors, you can now run `tar tzf dist/package_name-version_number.tar.gz` from your command line to view a list of the files that will be included in the source distribution for your package.
 
+_**Note:** Notice that from among the files, our LICENSE file and any test files that you have are not apart of the source distribution! We want these files to be included because they are already a part of the binary distribution._
 
+**Step 14:** Using a Manifest file to fix the sdist problem
+
+Run the following commands in your terminal:
+```bash
+pip install check-manifest
+check-manifest --create
+git add MANIFEST.in
+```
+You can now re-run: `python setup.py sdist` to rebuild your source distribution. When you rerun `tar tzf dist/package_name-version_number.tar.gz`, you should now see your LICENSE file and any testing files as part of the source distribution.
+
+<br>
+
+**Step 15:** FINALLY, Finally, finally...
+
+You now have a complete package to publish to PyPi! But, before you do, make sure you dot your i's and cross your t's:
+
+1. Rebuild your distributions with `python setup.py bdist_wheel sdist`.  
+2. Test installation with `pip install -e .`
+3. Run `ls dist/`. You should see both a wheel file and a tar file, corresponding to your binary and source distributions repectively.
+4. Verify the appropriate files are a part of your source distribution with `tar tzf dist/package_name-version_number.tar.gz`.
+
+Install the python `twine` package to assist the  uploading:
+```
+pip install twine
+```
+
+Finally, upload your distribution to PyPi.
+```
+twine upload dist/*
+```
+Done!
 
 
 <br>
@@ -252,3 +286,4 @@ author_email = "your.email@address.com",
 * [What Are Python Wheels and Why Should You Care?](https://realpython.com/python-wheels/)
 * [choosealicense.com](https://www.choosealicense.com)
 * [pypi.org/classifiers](https://pypi.org/classifiers)
+
