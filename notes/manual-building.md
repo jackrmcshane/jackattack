@@ -14,7 +14,7 @@ setup.py
 
 <br>
 
-**Step 3:** A rudimentary setup.py file will look like this. (**Note:** if you have pip installed, you already have setuptools as they ship together.)
+**Step 3:** A rudimentary setup.py file will look like this. (_**Note:** if you have pip installed, you already have setuptools as they ship together._)
 
 ```python
 from setuptools import setup
@@ -54,8 +54,9 @@ The output in the terminal will be rather lengthy, but somewhere amongst the fir
 'copying src/codebase.py -> build/lib'
 ```
 
-* **Note 1:** If you do not see a version of this line, your wheel file is empty and the rest of the work you do from here will be moot. You must attempt to rebuild the package if this occurs
-* **Note 2:** A wheel file contains a compressed version of your package and is what pip uses for distribution through the PyPi platform.
+* _**Note 1:** If you do not see a version of this line, your wheel file is empty and the rest of the work you do from here will be moot. You must attempt to rebuild the package if this occurs._
+* _**Note 2:** A wheel file contains a compressed version of your package and is what pip uses for distribution through the PyPi platform._
+* _**Note 3:** The `bdist` portion of the command creates a *binary* version of the distribution. Later, we will also see that we can distribute the package as source code._
 
 <br>
 
@@ -209,6 +210,36 @@ pip install -e .[dev]
 ```
 
 _**Note:** These instructions can also be found in the README.md_
+
+
+<br>
+
+**Step 13:** Building the Source Distribution
+
+In your terminal, run:
+```bash
+python setup.py sdist
+```
+
+This command generates a tar file of the souce code for the library that can be distributed through the PyPi platform. This can be useful for many reasons, least of which is allowing users of the platform to verify the code they will be running themselves.
+
+If you have followed this walkthrough to this point, you will likely see the following warnings after running the `python setup.py sdist` command:
+```
+running sdist
+...
+warning: check: missing required meta-data:
+warning: check: missing meta-data: either (author and author_email) or (maintainer and maintainer_email) must be supplied
+...
+```
+You can fix this by adding the information to the `setup.py` file as shown below:
+```python
+...
+url = "https://github.com/username/repository_name",
+author = "Author Name",
+author_email = "your.email@address.com",
+```
+
+
 
 
 
