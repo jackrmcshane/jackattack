@@ -144,11 +144,18 @@ setup(
 )
 ```
 
+_**Note:** Re-run `pip install -e .` every time you modify your `setup.py` file from here on out! This ensures that the package still installs properly. Re-run it!_
+
+<br>
 
 **Step 9:** Using README.md as PyPi project description
 
+Because our `setup.py` file is, in fact, a python file, we can add code as below.
 
 ```python
+with open("README.md", "r") as f:
+    long_description = f.read()
+    
 setup(
         ...
         long_description=long_description,
@@ -156,6 +163,28 @@ setup(
 )
 ```
 
+Using the python context manager, we read in the README.md file associated with the project, and set that as the PyPi project description using our `setup.py` file.
+
+_**Note:** Re-run `pip install -e .`!_
+
+<br>
+
+**Step 10:** Adding dependencies to setup.py
+
+You should add a list of your libraries dependencies to your setup.py file and this can be done in this oh so familiar fashion:
+
+```python
+setup(
+    ...
+    install_requires = [
+        "numpy ~= 1.23.5",
+    ],
+)
+```
+
+The `install_requires` parameter in our `setup.py` file is a replacment for the often used `requirements.txt` file that is part of many projects.
+
+_**Note:** Re-run `pip install -e .`_
 
 
 
